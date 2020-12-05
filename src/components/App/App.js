@@ -1,16 +1,54 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList'
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    galleryArray: [],
+    images: {
+      id: 0,
+      path: '',
+      description: '',
+      likes: 0
+    }
+  }
+
+  componentDidMount() {
+    this.getImages()
+  }
+
+  getImages = () => {
+    axios.get('/gallery')
+      .then((response) => {
+        this.setState({
+          galleryArray: response.data
+        })
+      })
+  }
+
+  likeImage = (event, imageId) => {
+    axios.put(`/gallery/like/${imageId}`)
+      .then((response) => {
+        console.log(`PUT update`, response, response.data);
+        this.getImages();
+      })
+      .catch((error) => {
+        console.log(`Error in client PUT`, error);
+      })
+  }
+
   render() {
+    const { galleryArray } = this.state
+    console.log('images', this.state)
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
-        <br/>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList galleryArray={galleryArray}
+          likeImage={this.likeImage} />
       </div>
     );
   }

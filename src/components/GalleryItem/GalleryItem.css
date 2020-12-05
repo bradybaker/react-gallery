@@ -1,0 +1,14 @@
+.galleryCard {
+    height: 320px;
+    text-align: center;
+    margin-right: 1em;
+    margin-bottom: 8em;
+}
+
+.description {
+    width: 15em;
+    height: 20em;
+    align-items: center;
+    display: grid;
+    background-color: aliceblue;
+}
