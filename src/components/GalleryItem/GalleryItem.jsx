@@ -15,7 +15,7 @@ class GalleryItem extends Component {
 
     render() {
         const { path, description, likes, id } = this.props.item
-        const { likeImage } = this.props
+        const { likeImage, deleteImage } = this.props
         return (
             <div className='galleryCard hvr-grow-shadow'>
                 <div onClick={this.togglePicture}>
@@ -24,6 +24,7 @@ class GalleryItem extends Component {
                         <p className='description'>{description}</p>}</div>
                 <p>{likes}</p>
                 <button onClick={(event) => likeImage(event, id)}>Like</button>
+                <button onClick={(event) => deleteImage(event, id)}>Delete Image</button>
             </div>
         )
     }

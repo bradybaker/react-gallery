@@ -51,6 +51,16 @@ class App extends Component {
       })
   }
 
+  deleteImage = (event, imageId) => {
+    axios.delete(`/gallery/delete/${imageId}`)
+      .then((response) => {
+        this.getImages()
+      })
+      .catch(err => {
+        console.log('Error in client DELETE', err)
+      })
+  }
+
   handleChangeFor = (event, propertyName) => {
     this.setState({
       images: {
@@ -83,7 +93,8 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
         />
         <GalleryList galleryArray={galleryArray}
-          likeImage={this.likeImage} />
+          likeImage={this.likeImage}
+          deleteImage={this.deleteImage} />
       </div>
     );
   }

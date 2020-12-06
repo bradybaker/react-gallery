@@ -12,7 +12,8 @@ class GroceryList extends Component {
                     {
                         galleryArray.map(item => (
                             <GalleryItem item={item} key={item.id}
-                                likeImage={this.props.likeImage} />
+                                likeImage={this.props.likeImage}
+                                deleteImage={this.props.deleteImage} />
                         ))
                     }
                 </div>

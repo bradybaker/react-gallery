@@ -25,7 +25,6 @@ router.get('/', (req, res) => {
     pool.query(sqlText)
         .then((result) => {
             res.send(result.rows);
-            console.log('This is what we are GETTING from the db', result.rows)
         })
         .catch((err) => {
             console.log('Error in router GET', err)
@@ -38,11 +37,23 @@ router.post('/', (req, res) => {
     let sqlText = `INSERT INTO gallery (path, description) VALUES ($1, $2);`
     pool.query(sqlText, [newImage.path, newImage.description])
         .then((result) => {
-            console.log('Added image to db', result)
             res.sendStatus(201)
         })
         .catch((err) => {
             console.log('Error in router POST', err)
+        })
+})
+
+router.delete('/delete/:id', (req, res) => {
+    const galleryId = req.params.id
+    let sqlText = 'DELETE FROM gallery WHERE id=$1;'
+    pool.query(sqlText, [galleryId])
+        .then((response) => {
+            res.sendStatus(200)
+        })
+        .catch(err => {
+            console.log('Error in route delete', err)
+            res.sendStatus(500)
         })
 })
 
