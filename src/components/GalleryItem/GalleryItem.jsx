@@ -18,10 +18,10 @@ class GalleryItem extends Component {
         const { likeImage } = this.props
         return (
             <div className='galleryCard hvr-grow-shadow'>
-                <p onClick={this.togglePicture}>
+                <div onClick={this.togglePicture}>
                     {this.state.toggle ?
                         <img src={path} alt='GalleryImage' width={400} height={420} /> :
-                        <p className='description'>{description}</p>}</p>
+                        <p className='description'>{description}</p>}</div>
                 <p>{likes}</p>
                 <button onClick={(event) => likeImage(event, id)}>Like</button>
             </div>
