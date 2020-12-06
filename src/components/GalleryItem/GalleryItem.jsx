@@ -17,7 +17,7 @@ class GalleryItem extends Component {
         const { path, description, likes, id } = this.props.item
         const { likeImage } = this.props
         return (
-            <div className='galleryCard'>
+            <div className='galleryCard hvr-grow-shadow'>
                 <p onClick={this.togglePicture}>
                     {this.state.toggle ?
                         <img src={path} alt='GalleryImage' width={400} height={420} /> :

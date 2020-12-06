@@ -26,7 +26,7 @@ const galleryItems = [
     {
         id: 5,
         path: './images/minneSquad.jpg',
-        description: 'The people im spending most of my time with here in Minneapolis!',
+        description: 'The people I am spending most of my time with here in Minneapolis!',
         likes: 0
     },
     {
