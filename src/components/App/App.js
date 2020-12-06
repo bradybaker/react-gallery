@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList'
+import GalleryForm from '../GalleryForm/GalleryForm'
 import './App.css';
 
 class App extends Component {
@@ -8,10 +9,8 @@ class App extends Component {
   state = {
     galleryArray: [],
     images: {
-      id: 0,
       path: '',
       description: '',
-      likes: 0
     }
   }
 
@@ -31,6 +30,16 @@ class App extends Component {
       })
   }
 
+  postImage = (newImage) => {
+    axios.post('/gallery', newImage)
+      .then((response) => {
+        this.getImages()
+      })
+      .catch((err) => {
+        console.log('Error in Client POST', err)
+      })
+  }
+
   likeImage = (event, imageId) => {
     axios.put(`/gallery/like/${imageId}`)
       .then((response) => {
@@ -42,14 +51,37 @@ class App extends Component {
       })
   }
 
+  handleChangeFor = (event, propertyName) => {
+    this.setState({
+      images: {
+        ...this.state.images,
+        [propertyName]: event.target.value,
+      }
+    });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.postImage(this.state.images)
+    this.setState({
+      images: {
+        path: '',
+        description: ''
+      },
+    });
+  }
+
   render() {
     const { galleryArray } = this.state
-    console.log('images', this.state)
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Some Highlights from Brady Baker's Life</h1>
         </header>
+        <GalleryForm images={this.state.images}
+          handleChangeFor={this.handleChangeFor}
+          handleSubmit={this.handleSubmit}
+        />
         <GalleryList galleryArray={galleryArray}
           likeImage={this.likeImage} />
       </div>

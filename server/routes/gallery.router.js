@@ -32,4 +32,17 @@ router.get('/', (req, res) => {
         })
 }); // END GET Route
 
+router.post('/', (req, res) => {
+    const newImage = req.body
+    let sqlText = `INSERT INTO gallery (path, description) VALUES ($1, $2);`
+    pool.query(sqlText, [newImage.path, newImage.description])
+        .then((result) => {
+            console.log('Added image to db', result)
+            res.sendStatus(201)
+        })
+        .catch((err) => {
+            console.log('Error in router POST', err)
+        })
+})
+
 module.exports = router;

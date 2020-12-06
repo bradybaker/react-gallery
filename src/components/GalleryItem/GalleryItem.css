@@ -10,6 +10,12 @@
     justify-content: center;
 }
 
+.images {
+  width: 400px;
+  height: 420px;
+  margin-top: 16px;
+}
+
 .galleryCard:hover {
     cursor: pointer;
 }
