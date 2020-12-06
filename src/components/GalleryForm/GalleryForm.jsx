@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button';
 
 class GalleryForm extends Component {
     render() {
@@ -12,7 +13,7 @@ class GalleryForm extends Component {
                     <input type='text' value={path} onChange={(event) => handleChangeFor(event, 'path')} />
                     <label>Image Description: </label>
                     <input type='text' value={description} onChange={(event) => handleChangeFor(event, 'description')} />
-                    <button type='submit'>Add Image</button>
+                    <Button type='submit' variant="contained" color="primary">Add Image</Button>
                 </form>
             </div>
         )

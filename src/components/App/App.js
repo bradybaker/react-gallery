@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Header from '../Header/Header'
 import GalleryList from '../GalleryList/GalleryList'
 import GalleryForm from '../GalleryForm/GalleryForm'
 import './App.css';
@@ -85,9 +86,7 @@ class App extends Component {
     const { galleryArray } = this.state
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Some Highlights from Brady Baker's Life</h1>
-        </header>
+        <Header />
         <GalleryForm images={this.state.images}
           handleChangeFor={this.handleChangeFor}
           handleSubmit={this.handleSubmit}
