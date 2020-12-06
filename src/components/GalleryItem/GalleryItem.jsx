@@ -20,7 +20,7 @@ class GalleryItem extends Component {
             <div className='galleryCard hvr-grow-shadow'>
                 <div onClick={this.togglePicture}>
                     {this.state.toggle ?
-                        <img src={path} alt='GalleryImage' width={400} height={420} /> :
+                        <img className='images' src={path} alt='GalleryImage' /> :
                         <p className='description'>{description}</p>}</div>
                 <p>{likes}</p>
                 <button onClick={(event) => likeImage(event, id)}>Like</button>
