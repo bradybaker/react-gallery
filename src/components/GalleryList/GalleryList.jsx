@@ -7,7 +7,7 @@ class GroceryList extends Component {
         const { galleryArray } = this.props
         return (
             <div>
-                <p>Gallery goes here</p>
+                <p>Take a look at some pics and give them a click!</p>
                 <div className='galleryContainer'>
                     {
                         galleryArray.map(item => (

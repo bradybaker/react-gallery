@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">Some Highlights from Brady Baker's Life</h1>
         </header>
         <GalleryList galleryArray={galleryArray}
           likeImage={this.likeImage} />
