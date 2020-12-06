@@ -26,6 +26,9 @@ class App extends Component {
           galleryArray: response.data
         })
       })
+      .catch((err) => {
+        console.log('Error in client GET', err)
+      })
   }
 
   likeImage = (event, imageId) => {
