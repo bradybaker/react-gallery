@@ -1,11 +1,58 @@
 const galleryItems = [
-    { id: 1, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 },
-    { id: 2, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/34459643_10150953587364960_4758861800198373376_o.jpg?_nc_cat=102&ccb=2&_nc_sid=84a396&_nc_ohc=4dr13CS3ssUAX91Vd1S&_nc_ht=scontent-msp1-1.xx&oh=7bde9c00685854a3cc7da7525f5fdd67&oe=5FEF9E09', description: 'My niece Lucy and I spending the weekend in Chicago! Her first big city experience! Quite the change from our 1,500 person farm town.', likes: 0 },
-    { id: 3, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 },
-    { id: 4, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 },
-    { id: 5, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 },
-    { id: 6, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 },
-    { id: 7, path: 'https://scontent-msp1-1.xx.fbcdn.net/v/t1.0-9/127926763_10151290605209960_7714428393892115435_o.jpg?_nc_cat=107&ccb=2&_nc_sid=730e14&_nc_ohc=9NUY1_AoN_cAX8AozJB&_nc_oc=AQlkuB52yzOk_KSTCbZZDVyaPDi1dINhE3LsiMcRysMKK468z8K80lRUSr2pBppTgc0&_nc_ht=scontent-msp1-1.xx&oh=e492c7fde62aa244358c03c82e1f6c17&oe=5FF17198', description: 'Photo of my new pup Mac.', likes: 0 }
+    {
+        id: 1,
+        path: './images/awkward.jpg',
+        description: 'Starting things off with the classic awkward picture from my high school years. With me, are Ashlyn and Bradey! Two of my closest friends to this day! It is only up from here!',
+        likes: 0
+    },
+    {
+        id: 2,
+        path: './images/momma.jpg',
+        description: 'Had to throw in a picture with my momma! I am so lucky to be able to call her mom!!',
+        likes: 0
+    },
+    {
+        id: 3,
+        path: './images/bradySquad.jpg',
+        description: 'My nieces and nephew! The people the keep me young.',
+        likes: 0
+    },
+    {
+        id: 4,
+        path: './images/sugarLoaf.jpg',
+        description: 'One of my favorite hikes in the Rockies, Sugar Loaf Mountain!',
+        likes: 0
+    },
+    {
+        id: 5,
+        path: './images/minneSquad.jpg',
+        description: 'The people im spending most of my time with here in Minneapolis!',
+        likes: 0
+    },
+    {
+        id: 6,
+        path: './images/bradyHike.jpg',
+        description: 'Bradey again! With my boyfriend Mark and I hiking through Willow Falls',
+        likes: 0
+    },
+    {
+        id: 7,
+        path: './images/EwCovid.jpg',
+        description: 'A great reference from one of my favorite tv shows. EW!',
+        likes: 0
+    },
+    {
+        id: 8,
+        path: './images/COVID.jpg',
+        description: 'I tested A LOT of people for COVID in a past life.',
+        likes: 0
+    },
+    {
+        id: 9,
+        path: './images/mac.jpg',
+        description: 'My new puppy, Mac! He is a Cavapoo and only 10 weeks old in this pic! SO CUTE!',
+        likes: 0
+    }
 
 ];
 

@@ -31,7 +31,7 @@ class App extends Component {
   likeImage = (event, imageId) => {
     axios.put(`/gallery/like/${imageId}`)
       .then((response) => {
-        console.log(`PUT update`, response, response.data);
+        console.log(`PUT update`, response.data);
         this.getImages();
       })
       .catch((error) => {

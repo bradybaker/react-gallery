@@ -19,8 +19,9 @@ class GalleryItem extends Component {
         return (
             <div className='galleryCard'>
                 <p onClick={this.togglePicture}>
-                    {this.state.toggle ? <img src={path} alt='GalleryImage' width={300} height={320} />
-                        : <p className='description'>{description}</p>}</p>
+                    {this.state.toggle ?
+                        <img src={path} alt='GalleryImage' width={400} height={420} /> :
+                        <p className='description'>{description}</p>}</p>
                 <p>{likes}</p>
                 <button onClick={(event) => likeImage(event, id)}>Like</button>
             </div>
